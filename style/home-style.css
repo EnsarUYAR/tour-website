@@ -1,0 +1,800 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --primary: #047CB3;
+  --primary-dark: #014B6E;
+  --secondary-color: #913122;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+body {
+  font-family: "Catamaran", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  .logo {
+    width: 179px;
+    height: 55px;
+
+    @media screen and (max-width: 768px) {
+      width: 153px;
+      height: 47px;
+    }
+  }
+
+  .navbar {
+    @media screen and (max-width: 820px) {
+      display: none;
+    }
+
+    span {
+      padding-right: 10px;
+    }
+  }
+
+  .header-right {
+    display: flex;
+    gap: 10px;
+
+    @media screen and (max-width: 820px) {
+      display: none;
+    }
+
+    span {
+      display: flex;
+      align-self: center;
+      gap: 4px;
+    }
+  }
+
+  .aside {
+    display: none;
+
+    @media screen and (max-width: 820px) {
+      display: block;
+    }
+  }
+}
+
+/* BANNER */
+.banner {
+  background-image: url(/assets/banner.png);
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 56px;
+    color: #fff;
+
+    @media screen and (max-width: 768px) {
+      font-size: 31px;
+    }
+  }
+
+  .banner-search-bar {
+    background-color: #fff;
+    width: 536px;
+    height: 50px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+    padding-right: 5px;
+
+    @media screen and (max-width: 768px) {
+      width: 344px;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      flex: 1;
+    }
+
+    button {
+      padding: 12px 25px;
+      border-radius: 40px;
+      border: none;
+      background-color: var(--secondary-color);
+      color: #fff;
+    }
+  }
+}
+
+/* TOP ACTIVITIES */
+.activities {
+  padding-top: 112px;
+
+  h2 {
+    padding-left: 15px;
+    font-size: 42px;
+
+    @media screen and (max-width:960px) {
+
+      font-size: 30px;
+
+
+    }
+  }
+
+  .activity-cards {
+    padding-top: 25px;
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+
+    .card {
+      box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 2px;
+      border-radius: 20px;
+      margin: 10px;
+
+      overflow: hidden;
+
+      @media screen and (max-width:960px) {
+
+        min-width: 330px;
+
+
+      }
+
+      /* CARD TOP */
+      .card-top {
+        background-image: url(/assets/horse-riding.png);
+        background-size: cover;
+        background-position: 50%;
+        padding-top: 160px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        font-weight: 800;
+        color: var(--white);
+        padding-left: 20px;
+        padding-right: 20px;
+
+        >span {
+          background-color: var(--primary-dark);
+          padding: 5px 11px;
+          border-radius: 5px;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+
+        .prices {
+          text-shadow: 1px 1px 8px #000000;
+          list-style: none;
+
+
+          .high-price {
+            padding-left: 20px;
+            text-decoration: line-through;
+            font-size: 20px;
+          }
+
+          .low-price {
+            font-size: 32px;
+          }
+        }
+      }
+
+      /* CARD BOTTOM */
+      .card-bottom {
+        padding: 20px;
+
+        div {
+          span {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* SERVICES */
+.services {
+  background-image: url(/assets/test-services.png);
+  background-size: cover;
+  background-position-x: 40%;
+  margin-top: 86px;
+  padding-top: 100px;
+  padding-bottom: 80px;
+
+  @media screen and (max-width: 428px) {
+
+    padding-top: 80px;
+  }
+
+  .services-cards {
+    flex-wrap: wrap;
+
+    img {
+      @media screen and (max-width: 428px) {
+        width: 84px;
+      }
+    }
+
+    .services-card {
+      background-color: var(--primary-dark);
+      opacity: 0.8;
+      margin: 5px 10px;
+      padding-right: 50px;
+      border-radius: 10px;
+
+      .title {
+        padding-top: 18px;
+
+        @media screen and (max-width: 428px) {
+          padding-bottom: 10px;
+        }
+
+        h2 {
+          color: var(--white);
+          font-size: 22px;
+
+          @media screen and (max-width: 428px) {
+            font-size: 18px;
+          }
+        }
+
+        p {
+          color: var(--white);
+          font-size: 14px;
+        }
+      }
+
+    }
+
+
+  }
+}
+
+/* DESTINATIONS */
+
+
+.destinations {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media screen and (max-width:960px) {}
+
+  h2 {
+    padding-left: 30px;
+    font-size: 44px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 26px;
+    }
+  }
+
+  .destination-cards {
+    overflow-x: scroll;
+    padding-top: 10px;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .card {
+      background-image: url(/assets/rafting.png);
+      background-size: cover;
+      overflow: hidden;
+      padding-top: 20px;
+      background-position: 50%;
+      border-radius: 20px;
+      width: 100%;
+      height: 338px;
+
+      @media screen and (max-width:960px) {
+        min-width: 258px;
+      }
+
+      h3 {
+        color: var(--white);
+        text-shadow: 1px 1px 8px #000000;
+
+      }
+    }
+  }
+}
+
+/*  SERVİCES-2 */
+.services-2 {
+  margin-top: 80px;
+
+  .cards {
+    padding-left: 20px;
+    padding-right: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media screen and (max-width: 344px) {
+
+
+      .services-card {
+        flex-direction: column;
+        align-items: center;
+        max-width: 335px !important;
+
+        p,
+        h2 {
+          display: flex;
+          /* justify-content: center; */
+          max-width: 80%;
+          flex-wrap: wrap;
+        }
+
+        img {
+          width: 85px;
+        }
+      }
+    }
+
+    .services-card {
+      gap: 20px;
+
+      @media (min-width: 375px) and (max-width: 1400px) {
+        min-width: 375px;
+      }
+
+      img {
+        padding: 15px;
+        border-radius: 50%;
+        box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 2px;
+
+
+      }
+
+      p {
+        font-size: 14px;
+        color: var(--primary-dark);
+        max-width: 275px;
+
+        @media screen and (max-width: 960px) {
+          font-size: 13px;
+        }
+      }
+
+      h2 {
+        font-weight: 900;
+        font-size: 22px;
+        color: var(--primary-dark);
+
+        @media screen and (max-width: 960px) {
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}
+
+/* UNMISSABLE SIGHTS */
+.unmissable-sights {
+  margin-top: 50px;
+  padding-left: 10px;
+
+
+  h2 {
+    padding-left: 5px;
+    font-size: 44px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 26px;
+      padding-left: 25px;
+    }
+  }
+
+  .cards {
+    margin-top: 20px;
+    padding-bottom: 5px;
+    gap: 20px;
+    overflow-x: scroll;
+
+    @media screen and (max-width: 960px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .unmissable-cards {
+      background-image: url(/assets/pamukkale.png);
+      background-size: cover;
+      border-radius: 20px;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 160px;
+      padding-left: 15px;
+      padding-bottom: 27px;
+
+      @media screen and (max-width: 960px) {
+        min-width: 330px;
+      }
+
+      .text {
+        h2 {
+          font-size: 22px;
+          color: var(--white);
+          text-shadow: 1px 1px 8px #504e4e;
+          margin-bottom: 10px;
+        }
+
+        span {
+          background-color: var(--white);
+          padding: 10px 11px 8px 11px;
+          border-radius: 10px;
+          color: var(--primary-dark);
+          font-weight: 900;
+
+        }
+      }
+    }
+  }
+}
+
+/* POPULAR TOURS */
+.popular-tours {
+  margin-top: 83px;
+  background-image: url(/assets/popularTour-bg.png);
+  height: 972px;
+
+  h2 {
+    padding-top: 96px;
+    letter-spacing: 1;
+    place-self: center;
+    white-space: nowrap;
+    color: var(--white);
+    font-weight: 900;
+    text-shadow: 0 0 1px #000000;
+    font-size: 46px;
+
+    @media screen and (max-width: 428px) {
+      font-size: 32px;
+    }
+  }
+
+  .popular-cards {
+    overflow-x: scroll;
+    padding-top: 50px;
+
+    .card {
+      padding-top: 5px;
+      box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 2px;
+      border-radius: 20px;
+      margin: 10px;
+      min-width: 330px;
+      background-color: var(--white);
+      overflow: hidden;
+
+      @media screen and (max-width:960px) {}
+
+      /* CARD TOP */
+      .card-top {
+        background-image: url(/assets/horse-riding.png);
+        background-size: cover;
+        background-position: 50%;
+        padding-top: 160px;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        font-weight: 800;
+        color: var(--white);
+        padding-left: 20px;
+        padding-right: 20px;
+        transform: scale(0.9);
+        border-radius: 20px;
+
+        >span {
+          background-color: var(--primary-dark);
+          padding: 5px 11px;
+          border-radius: 5px;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+
+        .prices {
+          text-shadow: 1px 1px 8px #000000;
+          list-style: none;
+
+
+          .high-price {
+            padding-left: 20px;
+            text-decoration: line-through;
+            font-size: 20px;
+          }
+
+          .low-price {
+            font-size: 32px;
+          }
+        }
+      }
+
+      /* CARD BOTTOM */
+      .card-bottom {
+        padding: 20px;
+
+        div {
+          span {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .video {
+    width: 100%;
+
+    padding-top: 70px;
+
+    img {
+
+      width: 80%;
+
+    }
+
+  }
+}
+
+/* BLOGS-ARTICLES */
+
+.blogs-articles {
+  margin-top: 550px;
+  overflow-x: scroll;
+
+  @media screen and (max-width: 1000px) {
+    margin-top: 7%;
+  }
+
+  h2 {
+    background-image: url(assets/dotted-arrow.png);
+    padding-top: 96px;
+    padding-bottom: 60px;
+    letter-spacing: 1;
+    place-self: center;
+    white-space: nowrap;
+    font-weight: 800;
+    text-shadow: 0 0 1px #000000;
+    font-size: 46px;
+
+    @media screen and (max-width: 760px) {
+      padding-left: 28px;
+      font-size: 26px;
+      place-self: start;
+      padding-bottom: 30px;
+    }
+  }
+
+  .article-cards {
+    gap: 30px;
+    padding-left: 28px;
+
+    /* paddingright çalışmıyo */
+    .card {
+      background-image: url(/assets/rafting.png);
+      background-size: cover;
+      border-radius: 20px;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 130px;
+      padding-right: 1px;
+      padding-left: 15px;
+      padding-bottom: 27px;
+
+
+      @media screen and (max-width: 960px) {
+        min-width: 330px;
+        padding-top: 64px;
+      }
+    }
+
+    p {
+      margin-top: 159px;
+      text-shadow: 1px 1px 8px #000000;
+      font-size: 20px;
+      color: var(--white);
+    }
+  }
+}
+
+/* TOP ATTRACTIONS */
+
+.top-attractions {
+  margin-top: 146px;
+  background-color: #f7f7f7;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 48;
+  }
+
+  h2 {
+    padding-top: 46px;
+    padding-bottom: 60px;
+    letter-spacing: 1;
+    place-self: center;
+    white-space: nowrap;
+    font-weight: 800;
+    text-shadow: 0 0 1px #000000;
+    font-size: 46px;
+
+    @media screen and (max-width: 760px) {
+      padding-left: 28px;
+      font-size: 26px;
+      place-self: start;
+      padding-bottom: 30px;
+      white-space: wrap;
+    }
+  }
+
+  .parent {
+    gap: 20px;
+    padding-bottom: 100px;
+
+    .kutu {
+      display: flex;
+      align-items: center;
+      box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 2px;
+      width: auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .sayi {
+      color: white;
+      background-color: var(--primary-dark);
+      padding: 2px 8px 2px 10px;
+
+    }
+
+    .sehir {
+      padding: 2px 8px 2px 10px;
+    }
+  }
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* BRANDS */
+.brands {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  gap: 20px;
+  overflow-x: scroll;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  .card {
+    min-width: 210px;
+    min-height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 2px;
+    border-radius: 10px;
+  }
+}
+
+footer {
+  background-image: url(/assets/footer-bg.png);
+  background-size: cover;
+
+  .colones-header {
+    color: var(--white);
+    text-shadow: 1px 1px 80px #000000;
+    white-space: nowrap;
+  }
+
+  p {
+    color: var(--white);
+    text-shadow: 1px 1px 80px #000000;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+
+    li {
+      letter-spacing: .8px;
+      font-weight: 500;
+
+      /* padding: 4px 0; */
+      color: var(--white);
+      text-shadow: 1px 1px 80px #000000;
+      white-space: nowrap;
+    }
+  }
+
+  .colones {
+    padding: 45px 10px;
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 500px) {
+      .colone-1 {
+        width: 100%;
+      }
+    }
+
+    .colone-1 {
+      min-width: 352px;
+      flex: 1;
+
+      div {
+        place-content: center;
+      }
+    }
+
+    .colones-2 {
+      flex: 1;
+      padding-top: 20px;
+
+      .logos-mobile {
+        display: none;
+      }
+
+      @media screen and (max-width: 428px) {
+        .logos-mobile {
+          display: block;
+          margin-top: 40px;
+
+          img {
+            width: 43px;
+          }
+        }
+
+        .logos-web {
+          display: none;
+        }
+      }
+    }
+  }
+}
