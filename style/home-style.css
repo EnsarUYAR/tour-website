@@ -5,7 +5,7 @@
   width: 100%;
 
   @media (max-width: 960px) {
-      width: 3px;
+    width: 3px;
   }
 }
 
@@ -443,7 +443,6 @@ header {
 /* UNMISSABLE SIGHTS */
 .unmissable-sights {
   margin-top: 50px;
-  padding-left: 10px;
 
 
   h2 {
@@ -610,7 +609,6 @@ header {
 
 .blogs-articles {
   margin-top: 550px;
-  overflow-x: scroll;
 
   @media screen and (max-width: 1000px) {
     margin-top: 7%;
@@ -638,6 +636,8 @@ header {
   .article-cards {
     gap: 30px;
     padding-left: 28px;
+    overflow-x: scroll;
+    padding-right: 28px;
 
     /* paddingright çalışmıyo */
     .card {

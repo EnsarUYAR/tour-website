@@ -72,6 +72,10 @@ html {
  justify-content: space-between;
 }
 
+.justify-evenly {
+ justify-content: space-evenly;
+}
+
 .row {
  flex-direction: row;
 }
@@ -321,14 +325,45 @@ header {
      background-color: transparent;
     }
    }
+  }
 
+  /* TRANSFER DETAIL */
+  .transfer-detail {
+   margin-top: 10px;
+   padding: 10px 41px;
+   background: linear-gradient(180deg, #ce533d, #d53c21);
+   border-radius: 20px;
 
+   .transfer-detail-header {
+    border-bottom: 1px dotted;
+   }
 
+   .vehicles {
+    background-color: var(--white);
+    border-radius: 20px;
 
+    .vehicle-header,
+    .vehicle-price {
+     color: var(--primary-dark);    }
 
+    .vehicle {
+     margin-top: 10px;
+     gap: 80px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     padding-left: 50px;
+     padding-right: 10px;
+     img:not(span>img){
+      width:158px;
+     }
 
+    }
 
-
+    .vehicle:nth-child(2) {
+     background-color: rgb(218, 215, 215);
+     /* padding-left: 10px; */
+    }
+   }
   }
  }
 }

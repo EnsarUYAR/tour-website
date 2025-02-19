@@ -35,6 +35,11 @@ html {
     scrollbar-gutter: stable;
     /* Keeps layout stable, removes scrollbar if not needed */
 }
+@supports not (scrollbar-gutter: stable) {
+    html {
+        padding-right: 15px; /* Manually add space for the scrollbar */
+    }
+}
 
 .container {
     overflow: auto;
