@@ -337,6 +337,7 @@ header {
    .transfer-detail-header {
     border-bottom: 1px dotted;
    }
+   /* VEHICLES */
 
    .vehicles {
     background-color: var(--white);
@@ -344,7 +345,8 @@ header {
 
     .vehicle-header,
     .vehicle-price {
-     color: var(--primary-dark);    }
+     color: var(--primary-dark);
+    }
 
     .vehicle {
      margin-top: 10px;
@@ -353,8 +355,9 @@ header {
      padding-bottom: 10px;
      padding-left: 50px;
      padding-right: 10px;
-     img:not(span>img){
-      width:158px;
+
+     img:not(span>img) {
+      width: 158px;
      }
 
     }
@@ -363,6 +366,57 @@ header {
      background-color: rgb(218, 215, 215);
      /* padding-left: 10px; */
     }
+   }
+/* PICK-UP DETAILS */
+   .pickup-details {
+    margin: 0 auto;
+    color: var(--white);
+    padding-top: 37px;
+    padding-left: 21px;
+    padding-right: 21px;
+    padding-bottom: 31px;
+    border-radius: 20px;
+
+    .reservation-bar {
+     gap: 20px;
+     flex-wrap: wrap;
+     width: 100%;
+     padding-bottom: 20px;
+
+
+     div:nth-child(1),
+     div:nth-child(2) {
+      @media screen and (max-width: 960px) {}
+
+      width: 38%;
+     }
+
+     div {
+
+
+      h4 {
+       white-space: nowrap;
+      }
+
+      span {
+       border-radius: 10px;
+       padding-left: 5px;
+       padding-right: 5px;
+       background-color: var(--white);
+       height: 50px;
+       white-space: nowrap;
+
+       input {
+
+        border: none;
+        outline: none;
+        flex: 1;
+       }
+      }
+     }
+    }
+
+
    }
   }
  }

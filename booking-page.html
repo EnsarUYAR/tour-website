@@ -147,6 +147,7 @@
       <!-- TRANSFER DETAIL -->
       <div class="transfer-detail">
         <h2 class="transfer-detail-header">Transfer Detail</h2>
+        <!-- VEHICLES -->
         <div class="vehicles">
 
           <div class="vehicle flex align-center wrap">
@@ -225,11 +226,62 @@
             <input type="radio">
           </div>
         </div>
-      </div>
-      <div class="pickup-details">
-        <div class="pickup-location">
-          
-          <input type="text">
+        <!-- PICK-UP DETAILS -->
+        <div class="pickup-details">
+          <div class="reservation-bar flex wrap">
+            <div>
+              <h4>Pick-up Location</h4>
+              <span class="flex align-center">
+                <img src="/assets/location-primarydark.svg" alt="">
+                <input type="text" placeholder="Antalya Airport">
+              </span>
+            </div>
+            <div>
+              <h4>Drop Off Location</h4>
+              <span class="flex align-center">
+                <img src="/assets/location-primarydark.svg" alt="">
+                <input type="text" placeholder="Alanya Cleopatra Hotel">
+              </span>
+            </div>
+            <div>
+              <h4>Passengers</h4>
+              <span class="flex align-center">
+                <img src="/assets/people-icon-primarydark.svg" alt="" style="width: 29px;">
+                <select name="passenger" id="passenger" aria-placeholder="2">
+                  <option value="2">asdad</option>
+                  <option value="3">sdadsasdasd</option>
+                  <option value="4">sdadsdads</option>
+                  <option value="5">sdad</option>
+                </select></span>
+            </div>
+            <div>
+              <h4>Transfer Date</h4>
+              <span class="flex align-center">
+                <img src="/assets/date-icon-primarydark.svg" alt="">
+                <input type="date" value="2025-02-03">
+                <img src="/assets/chevron-down.svg" alt="">
+              </span>
+            </div>
+            <div>
+              <h4>Transfer Time</h4>
+              <span class="flex align-center">
+                <img src="/assets/clock-primarydark.svg" alt="" style="width: 29px;">
+                <input type="time" value="13:30">
+                <img src="/assets/chevron-down.svg" alt="">
+              </span>
+            </div>
+            <div>
+              <h4>Flight Number</h4>
+              <span class="flex align-center">
+                <img src="/assets/hash-primarydark.svg" alt="" style="width: 29px;">
+                <input type="text" value="IR1235123">
+              </span>
+            </div>
+            <div style="place-content: center; ">
+              <input type="checkbox">
+              Return
+            </div>
+          </div>
         </div>
       </div>
 
